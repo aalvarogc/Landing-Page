@@ -1,0 +1,61 @@
+/* #222E50  #007991  #439A86  #BCD8C1 */
+html{
+    scroll-behavior: smooth;
+}
+/* NAV */
+.navbar{
+    background-color: #222E50;
+}
+.nav-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 2em 0px 2em;
+    width: 100%;
+}
+/* CAROUSEL */
+.carouselTitle{
+    letter-spacing: .2em;
+}
+.carousel-item{
+    height: 94vh !important;
+}
+.carousel-item img{
+    height: 100vh !important;
+    object-fit: cover;
+    filter: brightness(80%);
+}
+/* FILMS */
+#filmImg{
+    object-fit: cover;
+    border-radius: .3em;
+}
+.btn-primary{
+    background-color: #007991;
+}
+.btn-primary:hover{
+    background-color: #222E50;
+}
+.modal-body{
+    font-size: .95em;
+    text-align: justify;
+    padding: 2em;
+    padding-top: 1em;
+}
+/* ACTORS */
+#gray-row{
+    background-color: lightgray;
+}
+.imgActor{
+    width: 70%;
+    height: 12em;
+    object-fit: cover;
+}
+/* FOOTER */
+.fa-brands{
+    font-size: 1.5em;
+}
+.fa-brands:hover{
+    transition: .2s;
+    transform: scale(1.2);
+    color: #007991;
+}

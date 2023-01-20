@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.72.0">
+  <title>Avatar Landing Page</title>
+
+  <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/carousel/">
+
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="https://www.pngplay.com/wp-content/uploads/1/Letter-A-PNG.png" type="image/x-icon">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/0c06a27afa.js" crossorigin="anonymous"></script>
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    /* GLOBAL STYLES
+    --------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      color: #5a5a5a;
+    }
+
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 4rem;
+    }
+
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+      bottom: 3rem;
+      z-index: 10;
+    }
+
+    /* Declare heights because of positioning of img element */
+    .carousel-item {
+      height: 32rem;
+    }
+
+    .carousel-item>img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 32rem;
+    }
+
+
+    /* MARKETING CONTENT
+-------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .col-lg-4 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .marketing h2 {
+      font-weight: 400;
+    }
+
+    .marketing .col-lg-4 p {
+      margin-right: .75rem;
+      margin-left: .75rem;
+    }
+
+
+    /* Featurettes
+------------------------- */
+
+    .featurette-divider {
+      margin: 5rem 0;
+      /* Space out the Bootstrap <hr> more */
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -.05rem;
+    }
+
+
+    /* RESPONSIVE CSS
+-------------------------------------------------- */
+
+    @media (min-width: 40em) {
+
+      /* Bump up size of carousel content */
+      .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+      }
+
+      .featurette-heading {
+        font-size: 50px;
+      }
+    }
+
+    @media (min-width: 62em) {
+      .featurette-heading {
+        margin-top: 7rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="carousel.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+      <div class="nav-content">
+        <a class="navbar-brand" href="#">Avatar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto mb-2 mb-md-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#films">Películas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#trailer">Trailer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#actors">Actores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutUs">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
+        <li data-target="#myCarousel" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></li>
+        <li data-target="#myCarousel" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="4000">
+          <img src="https://wallpaperaccess.com/full/861755.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="carouselTitle">Avatar</h3>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="https://mobimg.b-cdn.net/v3/fetch/9c/9c8378f34045aadc49a49d90f12e622d.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="carouselTitle">Avatar 2</h3>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="https://images.hdqwalls.com/wallpapers/avatar-the-way-of-the-water-2022-5k-u1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="carouselTitle">Avatar 3</h3>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" data-bs-target="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" data-bs-target="#carouselExampleCaptions" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-around" id="films">
+        <h2 class="m-3 text-center">Películas</h2>
+        <div class="card col-lg-4" style="width: 18rem;">
+          <img class="card-img-top mt-2" id="filmImg" src="https://pics.filmaffinity.com/Avatar-265462659-large.jpg" alt="">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-center">Avatar</h5>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#avatar1">
+              Más información
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="avatar1" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Avatar</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-justify">
+                    <h2 class="text-center">Sinopsis</h2>
+                   <p>AVATAR nos lleva a un mundo situado más allá de la imaginación, en donde un recién llegado de la Tierra se embarca en una aventura épica, llegando a luchar, al final, por salvar el extraño mundo al que ha aprendido a llamar su hogar.</p>
+
+                    <p>Entramos en el extraño mundo de la mano de Jake Sully, un ex marine confinado a una silla de ruedas. Pero, a pesar de su abatido cuerpo, Jake sigue siendo un guerrero en su corazón. Es reclutado para viajar a años luz, a un puesto humano en Pandora, donde un consorcio corporativo está extrayendo un raro mineral que será clave en la solución de la crisis energética de la Tierra. Debido a que la atmósfera de Pandora es tóxica, han creado el Programa Avatar, en el que "conductores" humanos tienen sus conciencias unidas a un avatar, un cuerpo biológico controlado de manera remota que puede sobrevivir en el aire letal. Estos avatares han sido creados genéticamente como híbridos combinando ADN humano con ADN de los seres nativos de Pandora los Na'vi.
+                    Vuelto a nacer en su forma de avatar, Jake puede volver a caminar. Se le asigna la misión de infiltrarse entre los Na'vi, que se han convertido en un obstáculo importante para la extracción del preciado mineral. Pero una hermosa hembra Na'vi, Neytiri, salva la vida de Jake, y esto lo cambia todo. Jake es aceptado por su clan, y se preparara para convertirse en uno de ellos, lo que implica muchas pruebas y aventuras. A medida que la relación con su reticente profesora Neytiri se hace más profunda, aprende a respetar el modo de ser de los Na'vi y al final ocupa su lugar entre ellos. Pronto se enfrentará a la prueba definitiva, mientras los conduce en una épica batalla que decidirá el destino de todo un mundo.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card col-lg-4" style="width: 18rem;">
+          <img class="card-img-top mt-2" id="filmImg" src="https://es.web.img3.acsta.net/pictures/22/11/02/15/37/0544148.jpg" alt="">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-center">Avatar 2</h5>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#avatar2">
+              Más información
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="avatar2" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Avatar 2</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h2 class="text-center">Sinopsis</h2>
+                    <p>“Avatar 2″ significa el regreso de la RDA a Pandora, con el fin de retomar su plan extractivista en el nuevo hogar de Jake Sully, quien dejó su cuerpo humano para vivir como Na’vi junto a Neytiri. Ambos han formado una numerosa familia y el tiempo de paz se termina cuando regresan los humanos y un villano que parecía haber perecido en la anterior película.</p>
+
+                    <p>Como dice su título, “Avatar: el sentido del agua”, se ha entendido que la película explorará la importancia del agua como recurso vital para la existencia de cualquier ser. Esto se desarrollaría en un nuevo conflicto en la golpeada Pandora.
+                    “Jake Sully vive con su nueva familia formada en el planeta Pandora. Una vez que una amenaza familiar regresa para terminar lo que se inició anteriormente, Jake debe trabajar con Neytiri y el ejército de la raza Na’vi para proteger su planeta”</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card col-lg-4" style="width: 18rem;">
+          <img class="card-img-top mt-2" id="filmImg" src="https://pics.filmaffinity.com/Avatar-619571521-large.jpg" alt="">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-center">Avatar 3</h5>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#avatar3">
+              Más información
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="avatar3" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Avatar 3</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h2 class="text-center">Sinopsis</h2>
+                    <p>Todavía se desconoce la trama exacta de la tercera entrega de 'Avatar', pero James Cameron ha dejado más de una pista sobre qué escenarios visitaremos en Pandora. En abril de 2010, el director confirmó que 'Avatar 2' se ambientaría en los océanos (por algo se llama 'El sentido del agua'), mientras que 'Avatar 3' se ambientaría en el Sistema Alfa Centauri, aunque más de una década después los detalles del guion podrían haber cambiado.</p>
+                    <p>Cuando se le preguntó en una entrevista con la francesa 20 minutes, Cameron dio los primeros detalles sobre la "Gente de Ceniza" (Ash People), unos Na'vi de fuego que veremos en 'Avatar 3' y que podría tener un rol más de villanos. "Mostrar culturas diferentes a las que ya he mostrado. El fuego estará representado por la ‘Gente de Ceniza’. Quiero mostrar a los Na’vi desde otra perspectiva porque, por el momento, solo he mostrado su lado bueno. En las primeras películas, hay ejemplos humanos muy negativos y ejemplos Na'vi muy positivos. En 'Avatar 3', tendremos lo contrario”.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="trailer">
+        <iframe width="560" height="555" class="mt-5" src="https://www.youtube.com/embed/FSyWAxUg3Go" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    </div><!-- /.container -->
+    <div class="m-3" id="actors">
+      <h2 id="actors" class="m-3 mt-5 text-center">Actores</h2>
+      <div class="row border" id="gray-row">
+        <div class="col-8 align-self-center text-center">
+          <h5>Sam Worthington, interpretando a Jake Sully</h5>
+        </div>
+        <div class="col-4 d-flex justify-content-end">
+          <img src="https://img2.rtve.es/imagenes/sam-worthington-protagonista-avatar/1670861395113.jpg" class="imgActor m-2 rounded" alt="">
+        </div>
+      </div>
+      <div class="row flex-row-reverse">
+        <div class="col-8 align-self-center text-center">
+          <h5>Zoe Saldaña, interpretando a Neytiri</h5>
+        </div>
+        <div class="col-4 d-flex justify-content-start">
+          <img src="https://laopinion.com/wp-content/uploads/sites/3/2020/09/GettyImages-1179559285-e1600806599192.jpg?quality=80&strip=all&w=1200" class="imgActor m-2 rounded" alt="">
+        </div>
+      </div>
+      <div class="row border" id="gray-row">
+        <div class="col-8 align-self-center text-center">
+          <h5>Sigourney Weaver, interpretando Dr. Grace Augustine</h5>
+        </div>
+        <div class="col-4 d-flex justify-content-end">
+          <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/actress-sigourney-weaver-arrives-for-the-premiere-of-avatar-news-photo-1670920546.jpg?crop=0.88889xw:1xh;center,top&resize=1200:*" class="imgActor m-2 rounded" alt="">
+        </div>
+      </div>
+      <div class="row flex-row-reverse border">
+        <div class="col-8 align-self-center text-center">
+          <h5>Stephen Lang, interpretando a Colonel Miles Quaritch</h5>
+        </div>
+        <div class="col-4 d-flex justify-content-start">
+          <img src="https://img2.rtve.es/imagenes/sam-worthington-protagonista-avatar/1670861395113.jpg" class="imgActor m-2 rounded" alt="">
+        </div>
+      </div>
+      <div class="row border" id="gray-row">
+        <div class="col-8 align-self-center text-center">
+          <h5>Michelle Rodriguez, interpretando a Trudy Chacon</h5>
+        </div>
+        <div class="col-4 d-flex justify-content-end">
+          <img src="https://imagenes.20minutos.es/files/og_thumbnail/uploads/imagenes/2021/02/08/michelle-rodriguez.jpeg" class="imgActor m-2 rounded" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="container mt-5" id="aboutUs">
+      <footer class="py-5 border-top border-secondary">
+        <div class="row justify-content-between">    
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Ayuda</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contacto</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Envíos</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Devoluciones</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Legal</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Política de privacidad</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Términos y condiciones</a></li>
+            </ul>
+          </div>
+    
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Suscríbete a nuestro newsletter</h5>
+              <p>Resumen mensual de lo que es nuevo y emocionante de nosotros.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="email@email.com">
+                <button class="btn btn-primary" type="button">Suscribirse</button>
+              </div>
+            </form>
+          </div>
+        </div>
+    
+        <div class="d-flex flex-column flex-sm-row justify-content-between border-top border-secondary pt-2">
+          <p>&copy; 2023 Álvaro García Campos &middot; &real; Todos los derechos reservados.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li class="ms-3"><a class="link-dark" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+
+
+</body>
+
+</html>
+
